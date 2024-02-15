@@ -1,84 +1,44 @@
-# assignment_numpy
+# Image manipulations using numpy
 
-# Project: Image manipulation in Numpy
+This Jupyter notebook contains a Python script that allows various manipulations of an image of choice. 
+This project is useful for visualizing data in a unique and interesting way.
 
-## Overview
+## Table of Contents
 
-In this exercise, you should look for an image that you will use to do some manipulations with. It is highly important that you do all your image manipulations using the raw image data in Numpy (and do not use the PIL object). You can find in the following location an example of a notebook where we used Numpy for image manipulation: 
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
 
-`Dropbox/Syntra/slides/chapter09 Numpy/motiverend voorbeeld`
 
-## Detailed assignment
+## Features <a name="features"></a>
 
-**Assignment: Setting Up Project and Developing a Production Simulation Program**
+The notebook includes the following functions:
 
-In this assignment, you will follow a series of steps to set up a project structure, manage version control using Git, create a virtual environment with Anaconda, and develop a Python program for image manipulation
+1. **grid_with_flips**: This function concatenates the given image horizontally multiple times based on the number of repeats and the flip matrix.
+2. **create_colorful_big_one**: This function creates a collection of images whereby each image is mapped to a color (red, blue, or green) surrounding the original image.
+3. **add_rainbo**: This function adds a rainbow border to an image.
+4. **TBD**: This function creates ...
 
-**Step 1: Initialize Git Repository**
+## Installation <a name="installation"></a>
 
-Initialize a git repository on your personal GitHub account to track changes and collaborate effectively. You can add the data into this git repo.
+To run this notebook, you need to have Python installed on your machine. You can download Python from [here](https://www.python.org/downloads/).
 
-**Step 2: Create Virtual Environment with Anaconda**
+After installing Python, you need to install Jupyter Notebook. You can do this by running the following command in your terminal:
 
-Utilize Anaconda to establish a virtual environment for your project. Ensure that you install only the necessary packages required for the project.
-
-**Step 3: Choose & load image**
-
-Choose an image that you want to do the manipulations for. Use the following code to read in this image and get the underlying numpy object.
-
-```python
-from PIL import Image
-from matplotlib.pyplot as plt
-import numpy as np
-import os
-
-loc_input_img = os.path.join('..', 'data', 'input', 'pickle_rick.png')
-np_image = np.array(image)
-plt.imshow(np_image)
-plt.show()
+```bash
+pip install notebook
 ```
-I chose the following image:
 
-<div style="text-align:center">
-  <img src="images/image_raw.png" alt="Pickle Rick">
-</div>
+You also need to install the required Python libraries, which you can do by running the following command:
 
-**Step 4: Do my image manipulations**
+```pip install numpy matplotlib```
 
-Use Numpy to create all of the following manipulated versions of the original image:
+## Usage <a name="Usage"></a>
+To use this notebook, you need to have an image and a matrix. The matrix should contain the colors 'r', 'g', 'b' for Red, Green, and Blue respectively, and 'p1', 'p2', 'p3', 'p4' for the four pieces of the image.
 
-<div style="text-align:center">
-  <img src="images/image_manip1.png" alt="Manip1">
-</div>
+To run the notebook, navigate to the directory containing the notebook file in your terminal and run the following command:
 
-<div style="text-align:center">
-  <img src="images/image_manip2.png" alt="Manip2">
-</div>
+```jupyter notebook```
 
-<div style="text-align:center">
-  <img src="images/image_manip3.png" alt="Manip3">
-</div>
+This will open the Jupyter Notebook interface in your web browser. From there, you can open the notebook and run the cells to create your image.
 
-**Step 5: Generalize these manipulations**
-Generalize the image manipulations that you created in **Step 4**, generalize to the following (or even more general if you want):
- - Define a function `grid_with_flips(image, matrix)`, where `matrix` is a matrix containing the type of flips that you do with your image. You could say `0` for you image not flipped, `1` for flipping your image left right, `2` for flipping it upside down and `3` for flipping it both left right and upside down. For example the two images you created in **Step 4** would be the result of using the matrix: `[[1 for i in range(7)] for j in range(3)]` and `[[j for i in range(7)] for j in range(4)]`.
- - Define a function `create_colorful_big_one(colors)` where `colors` is a list of colors (starting left top and rotating clockwise). The image from `Step 4` is the result of calling the function `create_colorful_big_one(['b', 'b', 'b', 'b', 'r', 'r', 'g', 'g', 'g', 'g', 'r', 'r'])`.
-
- Can you also think of a way in which you could combine these two functions to create a single function that allows you to create (a combination of) the above manipulations?
-
- ***Remark:*** While I talk about "a single function", it is *not* best practice to create one single function containing all code, but rather create many small functions which are all combined in other function(s). Each function should do one thing, and your final function should simply combine those functionalities based on your input.
-
-Replace the code your wrote in **Step 4** by 3 simple function calls from the function(s) you defined in this step. Please also make sure to organize & document your code after completing this part.
-
-**Step 6: Your own manipulations**
-
-Choose 2 more ways in which you manipulate your image and implement them.
-
-**Step 7: Share your solution**
-
-Compose a *README.md* file to document and guide users through your project. Include clear instructions on setting up the project, and executing the simulation. Provide concise explanations of the project structure and include an environment *YAML* file that I can use to setup a virtual environment.
-
-By completing these steps, you trained the following skills:
- - Create a well organized codebase that allows for collaboration.
- - Learn to work with Numpy array objects.
- - Creation of general functions that can perform custom manipulations.
