@@ -16,7 +16,7 @@ The notebook includes the following functions:
 
 1. **grid_with_flips**: This function concatenates the given image horizontally multiple times based on the number of repeats and the flip matrix.
 2. **create_colorful_big_one**: This function creates a collection of images whereby each image is mapped to a color (red, blue, or green) surrounding the original image.
-3. **add_rainbo**: This function adds a rainbow border to an image.
+3. **add_rainbow**: This function adds a rainbow border to an image.
 4. **TBD**: This function creates ...
 
 ## Installation <a name="installation"></a>
