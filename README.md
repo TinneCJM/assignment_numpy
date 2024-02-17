@@ -43,7 +43,7 @@ Load your image of choice. This can be done by saving your image in the data/inp
 
 2. **create_colorful_big_one**: This function requires an image of choice and an input list containing 12 colors indicated by 'r', 'b' or 'g' refering to red, blue and green respectively. A default image and color list is provided if no inputs are specified.
 
-3. **add_rainbow**: This function requires and image of choice and a border thickness. A default image and border thickness is provided if no inputs are specified. Border thickness should not exceed 1000. Why? I didn't find it pretty.
+3. **add_rainbow**: This function requires and image of choice and a border thickness. A default image and border thickness is provided if no inputs are specified. Border thickness should be an integer between 0 and 1000.
 
 4. **rainbowify_image**: This function requires an image of choice. A default image is provided if no input is specified.
 
