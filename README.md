@@ -18,9 +18,9 @@ This project is useful for when you are bored and want to pass time in a unique 
 The notebook includes the following functions:
 
 1. **grid_with_flips**: This function concatenates the given image horizontally and vertically multiple times with rotations based on the number of repeats and the flip matrix.
-2. **create_colorful_big_one**: This function creates a collection of images whereby each image is mapped to a color (red, blue, or green) surrounding the original image.
-3. **add_rainbow**: This function adds a rainbow border to an image.
-4. **rainbowify_image**: This function blends the image together with a rainbow gradient and displays the result.
+2. **create_colorful_big_one**: This function creates a collection of images whereby each image is mapped to a color (red, blue, or green). These color images then create a clockwise border surrounding the original image.
+3. **add_rainbow**: This function adds a rainbow border to the image.
+4. **rainbowify_image**: This function blends the image together with a rainbow gradient.
 
 ## Installation <a name="installation"></a>
 
@@ -49,10 +49,10 @@ Load your image of choice. This can be done by saving your image in the data/inp
 
 ## Examples <a name="examples"></a>
 
-grid_with_flips(np_image,[[j for i in range(7)] for j in range(4)])
+```grid_with_flips(np_image,[[j for i in range(7)] for j in range(4)])```
 
-create_colorful_big_one(['r', 'b', 'g', 'b', 'r', 'r', 'g', 'r', 'b', 'g', 'r', 'r'])
+```create_colorful_big_one(['r', 'b', 'g', 'b', 'r', 'r', 'g', 'r', 'b', 'g', 'r', 'r'])```
 
-add_rainbow(np_image,20)
+```add_rainbow(np_image,20)```
 
-rainbowify_image(np_image)
+```rainbowify_image(np_image)```
