@@ -2,6 +2,7 @@
 
 This reposititory contains a jupyter notebook contains python scripts that allows various manipulations of an image of choice. 
 This project is useful for when you are bored and want to pass time in a unique and interesting way.
+The code of this project can be found on https://github.com/TinneCJM/assignment_numpy.
 
 ## Table of Contents
 
